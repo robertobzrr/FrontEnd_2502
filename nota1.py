@@ -3,15 +3,15 @@ generos = []
 
 for i in range(15):
     altura = float(input(f"Digite a altura da pessoa {i + 1}: "))
-    genero = input(f"Digite o gênero da pessoa {i + 1} (masculino/feminino): ").strip().lower()
+    genero = input(f"Digite o gênero da pessoa {i + 1} (m/f): ").strip().lower()
     alturas.append(altura)
     generos.append(genero)
 
 maior_altura = max(alturas)
 menor_altura = min(alturas)
 
-alturas_masculino = [altura for altura, genero in zip(alturas, generos) if genero == "masculino"]
-media_altura_masculino = sum(alturas_masculino) / len(alturas_masculino) if alturas_masculino else 0
+alturas_m = [altura for altura, genero in zip(alturas, generos) if genero == "masculino"]
+media_altura_masculino = sum(alturas_m) / len(alturas_m) if alturas_m else 0
 
 numero_feminino = sum(1 for genero in generos if genero == "feminino")
 
